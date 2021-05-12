@@ -1,0 +1,18 @@
+{% extends 'registration/base.html' %}
+{% load static %}
+{% block content %}
+<body style="background-color:#eaeaea;">
+<head>
+<link rel="stylesheet" href="{% static 'css/style_login.css' %}">
+</head>
+<div class="center">
+<a href="{% url 'dashboard' %}"class="button">Back to dashboard</a>
+</div>
+<h1>~Login~</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Login">
+</form>
+</body>
+{% endblock %}

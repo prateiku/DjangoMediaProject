@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>HOME🏠</title>
+  <link rel='stylesheet'><link rel="stylesheet" href="{% static 'css/style_homepage.css' %}">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header>
+  <h1><b>~WELCOME~ </b></h1>
+  <span> ~Basic Media Streaming Server, you are logged in as {{ user.username|default:'Guest' }}~ </span>
+</header>
+
+<div class="container cyan brackets"><b>
+  <a href="{% url 'media' %}">MEDIA</a>
+  <a href="{% url 'dashboard' %}">DASHBOARD</a>
+  {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}">LOGOUT</a>
+    {% else %}
+        <a href="{% url 'login' %}">LOGIN</a>
+  {% endif %}
+  <a href="{% url 'about' %}">ABOUT</a>
+</div>
+</b>
+<footer>
+  <span>~Home Media Server by PRATIK~</span>
+</footer>
+</body>
+</html>
