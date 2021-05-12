@@ -1,5 +1,7 @@
 # DjangoMediaProject
 Local media streaming service using Django.
 
-Founder: Pratik Chopane
+<h5>
+Founder: Pratik Chopane <br>
 CEO: Abhijeet Sonawane
+</h5>
