@@ -1,31 +1,69 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>HOME🏠</title>
-  <link rel='stylesheet'><link rel="stylesheet" href="{% static 'css/style_homepage.css' %}">
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<header>
-  <h1><b>~WELCOME~ </b></h1>
-  <span> ~Basic Media Streaming Server, you are logged in as {{ user.username|default:'Guest' }}~ </span>
-</header>
-
-<div class="container cyan brackets"><b>
-  <a href="{% url 'media' %}">MEDIA</a>
-  <a href="{% url 'dashboard' %}">DASHBOARD</a>
-  {% if user.is_authenticated %}
-        <a href="{% url 'logout' %}">LOGOUT</a>
-    {% else %}
-        <a href="{% url 'login' %}">LOGIN</a>
-  {% endif %}
-  <a href="{% url 'about' %}">ABOUT</a>
-</div>
-</b>
-<footer>
-  <span>~Home Media Server by PRATIK~</span>
-</footer>
-</body>
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+      <title>Local Media Server</title>
+   </head>
+   <body>
+      <!--  Nav Bar -->
+      <nav class="navbar navbar-expand-lg my-0 py-3 navbar-dark bg-dark">
+         <a class="navbar-brand" href="#">LocalMediaServer</a>
+      </nav>
+      <!--  Section - Blink Title -->
+      <section class="jumbotron text-center">
+         <div class="container">
+            <img src="/static/img/watching_movies1.jpg" alt="logo" width="120">
+            <h1 class="jumbotron-heading"><span id="typed"></span></h1>
+            <p class="lead text-muted">Want to keep favorite movies secure on server? Want to watch movies anywhere? Then 'Local Media Server' is for you. Its free!<br>
+               Upload Movies, Web-series, Music and watch it from anytime, anywhere.
+            </p>
+            <p>
+               <a href="{% url 'media' %}" class="btn btn-warning my-2">MEDIA</a>
+               <a href="{% url 'dashboard' %}" class="btn btn-success my-2">DASHBOARD</a>
+               {% if user.is_authenticated %}
+                    <a href="{% url 'logout' %}" class="btn btn-primary my-2">LOGOUT</a>
+               {% else %}
+                    <a href="{% url 'login' %}"class="btn btn-primary my-2">LOGIN</a>
+               {% endif %}
+               <a href="{% url 'about' %}" class="btn btn-danger my-2">ABOUT</a>
+            </p>
+         </div>
+      </section>
+      <!-- FOOTER -->
+      <footer class="container-fluid bg-dark my-0 py-3 text-light fixed-bottom">
+         <p class="mb-0 text-center">&copy; 2020-2021 LocalMediaServer</p>
+         <p class="mb-0 text-center">
+            <a href="#">Back to top |</a>
+            <a href="#">Privacy |</a>
+            <a href="#">Terms</a>
+         </p>
+      </footer>
+      <!-- Custom JavaScript -->
+      <!-- Script - Blink Title -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.9/typed.min.js" async defer></script>
+      <script>
+         window.onload = function() {
+             console.log("loaded")
+             var typed = new Typed('#typed', {
+                 strings: ["Welcome to Local Media Server", "Watch Movies", "Watch Web-series", "Listen Favorite Music", "Just Upload and Enjoy!", "and Many More Features :)"],
+                 backSpeed: 15,
+                 smartBackspace: true,
+                 backDelay: 1200,
+                 startDelay: 1000,
+                 typeSpeed: 25,
+                 loop: true,
+             });
+         };
+      </script>
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://kit.fontawesome.com/433888fe69.js" crossorigin="anonymous" defer></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+   </body>
 </html>
