@@ -38,9 +38,11 @@
       <footer class="container-fluid bg-dark my-0 py-3 text-light fixed-bottom">
          <p class="mb-0 text-center">&copy; 2020-2021 LocalMediaServer</p>
          <p class="mb-0 text-center">
-            <a href="#">Back to top |</a>
-            <a href="#">Privacy |</a>
-            <a href="#">Terms</a>
+            {% if user.is_authenticated %}
+                  <a href="{% url 'upload' %}" class="btn btn-primary my-2">upload</a>
+            {% else %}
+                  <a href="{% url 'login' %}"class="btn btn-primary my-2">LOGIN to upload</a>
+            {% endif %}
          </p>
       </footer>
       <!-- Custom JavaScript -->
