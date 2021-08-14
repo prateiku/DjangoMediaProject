@@ -2,6 +2,6 @@
 Local media streaming service using Django.
 
 <h5>
--Pratik Chopane
--Abhijeet Sonawane
+<br>-Pratik Chopane</br>
+<br>-Abhijeet Sonawane</br>
 </h5>
