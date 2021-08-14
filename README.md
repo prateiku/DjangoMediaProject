@@ -1,7 +1,5 @@
 # DjangoMediaProject
-Local media streaming service using Django.
+📺Local media streaming service using Django.
 
-<h5>
-<br>-Pratik Chopane</br>
-<br>-Abhijeet Sonawane</br>
-</h5>
+- [Pratik Chopane](https://github.com/Prateiku/)
+- [Abhijeet Sonawane](https://github.com/jacktherock)
