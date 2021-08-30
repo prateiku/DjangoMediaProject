@@ -1,0 +1,19 @@
+<!DOCTYPE html---associated with index() view homedia app--->
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/style_media.css' %}">
+    <title> &#128512; Media Center</title>
+</head>
+
+    <body style="background-color:#eaeaea;"></body>
+    <a href="{% url 'logout' %}" class="button">LOGOUT</a>
+    <a href="{% url 'dashboard' %}" class="button">DASHBOARD</a>
+    <a href="{% url 'homepage' %}" class="button">HOMEPAGE</a>
+    <h1>Hey <span  style="color: #08d9d6;">{{usr}}</span>! what are you watching today?</h1></body>
+    <div class="triangle-down"></div>
+    {% for mp4 in mp4_files %}
+        <h5><a href="{{mp4}}" class="button1" target="_blank">{{mp4}}</a></h5>
+    {% endfor %}
+    
+</html>

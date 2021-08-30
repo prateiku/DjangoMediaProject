@@ -1,0 +1,22 @@
+<!DOCTYPE html---associated with media_handling() view homedia app--->
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'css/style_video_stream.css' %}">
+</head>
+<title>{{video}}</title>
+<body style="background-color:#eaeaea;">
+<a href="{% url 'logout' %}" class="button">LOGOUT</a>
+<a href="{% url 'dashboard' %}" class="button">DASHBOARD</a>
+<a href="{% url 'media_login' %}" class="button">MEDIA</a>
+{% if video_url in vid1 %}
+  <h1>You are watching: <span style="color:#ff2e63">{{video}}</span></h1>
+  <video width="400" controls> 
+  <source src="{{video_url}}/" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+{% else %}
+  <h1><u style="color: #ff2e63;">No such media</u></h1>
+{% endif %}
+</body> 
+</html>

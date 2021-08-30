@@ -1,0 +1,39 @@
+{% extends 'registration/base.html' %}
+{%load static%}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/style_media.css' %}">
+</head>
+<!-- Alert -->
+<div class="alert alert-success alert-dismissible mb-0" role="alert">
+    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span></button>
+    <strong>
+        Media:
+    </strong>
+    Enjoy your collection !
+</div>
+<!-- Dashboard -->
+<div class="container">
+    {% comment %} <div class="d-grid gap-2 col-6 mx-auto mt-4"> {% endcomment %}
+
+        <div class="mt-3">
+           
+            <a href="{% url 'upload' %}" class="btn btn-success mx-2">UPLOAD MEDIA</a>  
+            <a href="{% url 'dashboard' %}" class="btn btn-warning mx-2">DASHBOARD</a>
+            <a href="{% url 'homepage' %}" class="btn btn-primary mx-2">HOMEPAGE</a>
+            <a href="{% url 'logout' %}" class="btn btn-danger mx-2">LOGOUT</a>
+           
+           <hr class="my-3">
+        
+            <h1>Hey <span style="color: #08d9d6;">{{usr}}</span>! what are you watching today?</h1>
+            <br>
+            </body>
+            
+            <div class="triangle-down"></div>
+            {% for mp4 in mp4_files %}
+            <h5><a href="{{mp4}}" class="button1" target="_blank">{{mp4}}</a></h5>
+            {% endfor %}
+
+        </div>
+    </div>
+    {% endblock %}

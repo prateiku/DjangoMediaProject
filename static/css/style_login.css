@@ -1,0 +1,55 @@
+h1 {
+    text-align: center;
+    color: #ff2e63;
+}
+
+.button {
+    background-color:#eaeaea;
+    border: 2px solid #08d9d6;
+    color: rgb(3, 0, 0);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: sans-serif;
+    }
+
+  .button:hover {
+      background-color: #08d9d6;
+      color: white;
+    }
+
+form {
+    margin: 0 auto;
+    width:250px;
+}
+
+.center {
+    margin: auto;
+    width:250px;
+    text-align: center;
+  }
+
+input[type=submit] {
+    background-color:#eaeaea;
+    border: 2px solid #08d9d6;
+    color: rgb(3, 0, 0);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+input:hover {
+    background-color: #08d9d6;
+    color: white;
+  }

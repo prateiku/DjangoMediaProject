@@ -1,0 +1,89 @@
+
+html, body
+{
+    margin: 0px;
+}
+
+header{
+    margin: 0 auto;
+	padding: 5em 3em;
+	text-align: center;
+    background: #252a34;
+}
+
+header h1
+{
+    color: #ff2e63;
+    font-size: 40px;
+    font-weight: lighter;
+    margin-bottom: 5px;
+}
+
+header span
+{
+    color: #08d9d6;
+}
+footer
+{
+    margin: 0 auto;
+	padding: 5em 3em;
+	text-align: center;
+    background: #ff2e63;
+}
+footer span
+{
+  color:#252a34;
+}
+
+div.container
+{
+    margin: 0 auto;
+	padding: 10em 3em;
+	text-align: center;
+}
+
+div.container a
+{
+    color: #252a34;
+    text-decoration: none;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+
+.cyan
+{
+    background: #08d9d6;
+}
+/* Brackets go out */
+div.brackets a:before, div.brackets a:after
+{
+    position: absolute;
+    opacity: 0;
+    font-size: 35px;
+    top: 0px;
+    transition: all 0.3s;
+}
+
+div.brackets a:before
+{
+    content: '(';
+    left: 0px;
+    transform: translateX(10px);
+}
+
+div.brackets a:after
+{
+    content: ')';
+    right: 0px;
+    transform: translateX(-10px);
+}
+
+div.brackets a:hover:before, div.brackets a:hover:after
+{
+    opacity: 1;
+    transform: translateX(0px);
+}
